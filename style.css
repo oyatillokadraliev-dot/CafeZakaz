@@ -507,8 +507,9 @@ body.no-scroll{overflow:hidden}
   .reviews-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:768px){
-  
-  
+  .nav-links{display:none}
+  .header-phone{font-size:12px;letter-spacing:0}
+  .logo-text{font-size:16px}
   .hero-title{font-size:42px}
   .section-title{font-size:30px}
   .promo-inner{padding:36px 20px}
@@ -528,4 +529,20 @@ body.no-scroll{overflow:hidden}
   .sticky-call{right:20px}.sticky-wa{left:20px}
   .sticky-icon{font-size:21px}
   .hero-title{font-size:34px}
+}
+/* Mobile: показываем телефон как кнопку-иконку */
+@media(max-width:768px){
+  .header-phone-mobile{
+    display:flex;align-items:center;justify-content:center;
+    width:40px;height:40px;border-radius:50%;
+    background:var(--accent);color:#fff;font-size:18px;
+    text-decoration:none;flex-shrink:0;
+    box-shadow:0 4px 14px var(--accent-glow);
+    transition:var(--tr);
+  }
+  .header-phone-mobile:hover{transform:scale(1.08)}
+  .header-phone{display:none !important}
+}
+@media(min-width:769px){
+  .header-phone-mobile{display:none}
 }
